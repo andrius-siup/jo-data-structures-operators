@@ -40,3 +40,16 @@ console.log(arr);
 
 const [first, , second] = restaurant.categories;
 console.log(first, second);
+
+let [main, secondary] = restaurant.categories;
+console.log(main, secondary); // Italian Pizzeria
+
+// Switching variables
+const temp = main;
+main = secondary;
+secondary = temp;
+console.log(main, secondary); // Pizzeria Italian
+
+// Destructuring array
+[main, secondary] = [secondary, main];
+console.log(main, secondary);
