@@ -12,6 +12,10 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+
   openingHours: {
     thu: {
       open: 12,
@@ -38,18 +42,24 @@ const [x, y, z] = arr;
 console.log(x, y, z);
 console.log(arr);
 
-const [first, , second] = restaurant.categories;
-console.log(first, second);
+// const [first, , second] = restaurant.categories;
+// console.log(first, second);
 
 let [main, secondary] = restaurant.categories;
 console.log(main, secondary); // Italian Pizzeria
 
 // Switching variables
-const temp = main;
-main = secondary;
-secondary = temp;
-console.log(main, secondary); // Pizzeria Italian
+// const temp = main;
+// main = secondary;
+// secondary = temp;
+// console.log(main, secondary); // Pizzeria Italian
 
 // Destructuring array
 [main, secondary] = [secondary, main];
 console.log(main, secondary);
+
+// console.log(restaurant.order(2, 0));
+
+// Receive 2 return values from a function
+const [starter, mainCourse] = restaurant.order(2, 0);
+console.log(starter, mainCourse);
