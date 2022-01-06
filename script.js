@@ -64,9 +64,17 @@ console.log(main, secondary);
 const [starter, mainCourse] = restaurant.order(2, 0);
 console.log(starter, mainCourse);
 
+// Nested destructuring
 const nested = [2, 4, [5, 6]];
 // const [i, j] = nested;
 // console.log(i, j); // 2 4
 
 const [i, , [j, k]] = nested;
 console.log(i, j, k); // 2 5 6
+
+// Default values
+const [p, q, r] = [8, 9];
+console.log(p, q, r); // 8 9 undefined
+
+const [t = 1, w = 1, u = 1] = [8, 9];
+console.log(t, w, u); // 8 9 1
