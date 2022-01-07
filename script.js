@@ -43,6 +43,30 @@ const {
 } = restaurant;
 console.log(restaurantName, hours, tags);
 
+// Set default value, also rename variable for starterMenu
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters);
+
+// Mutating variables
+let a = 111;
+let b = 999;
+const obj = { a: 23, b: 7, c: 14 };
+({ a, b } = obj); // Have to be wrapped in ()
+console.log(a, b);
+
+// Nested objects
+// const { fri } = openingHours;
+// console.log(fri);  // printed object
+
+// const {
+//   fri: { open, close },
+// } = openingHours;
+// console.log(open, close); // printed value 11 23
+
+const {
+  fri: { open: o, close: c }, // renamed variables
+} = openingHours;
+console.log(o, c); // printed value 11 23
 /*
 //////////////////////////
 // Deconstructoring array
