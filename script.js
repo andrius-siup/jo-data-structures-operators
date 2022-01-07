@@ -41,6 +41,12 @@ const restaurant = {
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
     );
   },
+
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`
+    );
+  },
 };
 
 const arr = [7, 8, 9];
@@ -69,7 +75,24 @@ console.log(menu);
 // Iterables: arrays, strings, maps, sets. NOT objects
 const str = 'Andrius';
 const letters = [...str, ' ', 'S.'];
-console.log(letters);
+console.log(letters); // same as unpack string
+console.log(...letters); // A n d r i u s
+// console.log(`${...str}`); // error
+
+// orderPasta
+const ingredients = [
+  prompt("Let's make pasta! Ingredient 1 ?"),
+  prompt('Ingredient 2 ?'),
+  prompt('Ingredient 3 ?'),
+];
+console.log(ingredients); // to see ingredients
+
+// Old way and not good
+// restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+
+// Easy way and expand all elements, call function with user inputed ingredients
+restaurant.orderPasta(...ingredients);
+
 /*
 ///////////////////////////////////////
 // Destructuring objects
