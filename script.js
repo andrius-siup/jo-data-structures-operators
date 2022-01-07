@@ -57,6 +57,14 @@ console.log(...newArr); // Spread operator (...) printed indexes
 const newMenu = [...restaurant.mainMenu, 'Gnocci'];
 console.log(newMenu);
 
+// Copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+// console.log(
+//   `Copied main Menu - ${mainMenuCopy}, also check new Menu ${newMenu} `
+// );
+// Join 2 arrays
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+console.log(menu);
 /*
 ///////////////////////////////////////
 // Destructuring objects
