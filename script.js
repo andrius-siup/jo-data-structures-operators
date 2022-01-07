@@ -32,12 +32,26 @@ const restaurant = {
   },
 };
 
+// Destructuring objects
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
+// Give new variable names
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+console.log(restaurantName, hours, tags);
+
+/*
+//////////////////////////
+// Deconstructoring array
+
 const arr = [2, 3, 4];
 const a = arr[0];
 const b = arr[1];
 const c = arr[2];
 
-// Deconstructoring array
 const [x, y, z] = arr;
 console.log(x, y, z);
 console.log(arr);
@@ -78,3 +92,4 @@ console.log(p, q, r); // 8 9 undefined
 
 const [t = 1, w = 1, u = 1] = [8, 9];
 console.log(t, w, u); // 8 9 1
+*/
