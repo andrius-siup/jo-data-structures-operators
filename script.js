@@ -53,6 +53,10 @@ console.log(newArr);
 
 console.log(...newArr); // Spread operator (...) printed indexes
 
+// added new dish and displayed to the console all new Menu
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+console.log(newMenu);
+
 /*
 ///////////////////////////////////////
 // Destructuring objects
