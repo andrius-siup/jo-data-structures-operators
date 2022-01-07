@@ -79,11 +79,11 @@ console.log(letters); // same as unpack string
 console.log(...letters); // A n d r i u s
 // console.log(`${...str}`); // error
 
-// orderPasta
+// orderPasta, real example
 const ingredients = [
-  prompt("Let's make pasta! Ingredient 1 ?"),
-  prompt('Ingredient 2 ?'),
-  prompt('Ingredient 3 ?'),
+  // prompt("Let's make pasta! Ingredient 1 ?"),
+  // prompt('Ingredient 2 ?'),
+  // prompt('Ingredient 3 ?'),
 ];
 console.log(ingredients); // to see ingredients
 
@@ -92,6 +92,18 @@ console.log(ingredients); // to see ingredients
 
 // Easy way and expand all elements, call function with user inputed ingredients
 restaurant.orderPasta(...ingredients);
+
+// Objects - copied restaurant obj into new variable
+const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Guiseppe' };
+console.log(newRestaurant);
+console.log(newRestaurant.foundedIn);
+console.log(newRestaurant.founder);
+console.log(restaurant); // do not effected
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Ristorante Roma';
+console.log(restaurantCopy.name);
+console.log(restaurant.name);
 
 /*
 ///////////////////////////////////////
