@@ -43,6 +43,20 @@ const restaurant = {
   },
 };
 
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+
+// Used spread operator ...
+const newArr = [1, 2, ...arr];
+console.log(newArr);
+
+console.log(...newArr); // Spread operator (...) printed indexes
+
+/*
+///////////////////////////////////////
+// Destructuring objects
+
 restaurant.orderDelivery({
   time: '22:30',
   address: 'Via del Sole, 21',
@@ -55,7 +69,6 @@ restaurant.orderDelivery({
   starterIndex: 1,
 });
 
-// Destructuring objects
 const { name, openingHours, categories } = restaurant;
 console.log(name, openingHours, categories);
 // Give new variable names
@@ -90,6 +103,8 @@ const {
   fri: { open: o, close: c }, // renamed variables
 } = openingHours;
 console.log(o, c); // printed value 11 23
+*/
+
 /*
 //////////////////////////
 // Deconstructoring array
