@@ -54,6 +54,29 @@ const restaurant = {
   },
 };
 
+const rest1 = {
+  name: 'Capri',
+  numGests: 20,
+};
+
+const rest2 = {
+  name: 'La Piazza',
+  owner: 'Giovanni Rossi',
+};
+
+// OR ||= assignment operator
+// rest1.numGests = rest1.numGests || 10;
+// rest2 = 20 because short-circuiting
+// rest2.numGuests = rest1.numGests || 10;
+
+// 👆 Same as above logical assignment operator 👆
+rest1.numGests ||= 10;
+rest2.numGests ||= 10;
+
+console.log(rest1);
+console.log(rest2);
+
+/*
 //////////////////////////////////////////////////////////
 // Nulish Coalescing Operator (??)
 
@@ -65,6 +88,8 @@ console.log(guests); // 10
 // null and undifined is truthy in Nullish
 const guestCorrect = restaurant.numGests ?? 10;
 console.log(guestCorrect); // 0
+*/
+
 /*
 ///////////////////////////////////////////////////////////
 // Short circuiting OR and AND
