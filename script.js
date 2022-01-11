@@ -81,6 +81,10 @@ add(2, 3);
 add(5, 3, 7, 2);
 add(8, 2, 5, 3, 2, 1, 4);
 
+// Created another array and used spread operator with this variable into function add
+const x = [23, 5, 7];
+add(...x);
+
 /*
 /////////////////////////////////
 // Spread Operator (...)
