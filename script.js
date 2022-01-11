@@ -53,6 +53,30 @@ const restaurant = {
     console.log(otherIngredient);
   },
 };
+
+// Use any data type, return any data type, short-circuiting
+// If the first is truthty than second not will be evaluated
+console.log(3 || 'Andrius'); // 3
+console.log('' || 'Andrius'); // Andrius
+console.log(true || 0); // true
+console.log(undefined || null); // null
+
+// Hello is first truthy so is return
+//           falsy    falsy  falsy  truthy    truthy  truthy
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+// There is no nmGests so print default 10
+const guests1 = restaurant.numGests ? restaurant.numGests : 10;
+console.log(guests1); // 10
+
+restaurant.numGests = 23;
+const guests2 = restaurant.numGests || 10;
+console.log(guests2); // 23
+
+/*
+////////////////////////////////////////////
+// Rest Pattern and Parameters
+
 // Take one main ingredient and REST ingredients store into array
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 
@@ -95,6 +119,7 @@ add(8, 2, 5, 3, 2, 1, 4);
 // Created another array and used spread operator with this variable into function add
 const x = [23, 5, 7];
 add(...x); // here spread operator - is used where we would otherwise write values, separated by a comma.
+*/
 
 /*
 /////////////////////////////////
