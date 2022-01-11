@@ -71,8 +71,19 @@ const rest2 = {
 // rest2.numGuests = rest1.numGests || 10;
 
 // 👆 Same as above logical assignment operator 👆
-rest1.numGests ||= 10;
-rest2.numGests ||= 10;
+// rest1.numGests ||= 10;
+// rest2.numGests ||= 10;
+
+// Nullish assignment operator (null or undefined)
+rest1.numGests ??= 10;
+rest2.numGests ??= 10;
+
+// rest1.owner = rest1.owner && '<ANONYMOUS>'; // undefined
+// rest2.owner = rest2.owner && '<ANONYMOUS>'; // <ANONYMOUS>
+
+// 👆 Same as above logical assignment operator 👆
+rest1.owner &&= '<ANONYMOUS>';
+rest2.owner &&= '<ANONYMOUS>';
 
 console.log(rest1);
 console.log(rest2);
