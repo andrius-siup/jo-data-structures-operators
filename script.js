@@ -56,7 +56,8 @@ const restaurant = {
 
 const rest1 = {
   name: 'Capri',
-  numGests: 20,
+  // numGests: 20,
+  numGests: 0,
 };
 
 const rest2 = {
