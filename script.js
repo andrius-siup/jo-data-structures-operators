@@ -54,6 +54,21 @@ const restaurant = {
   },
 };
 
+//////////////////////////////////////////////////////////
+// Nulish Coalescing Operator (??)
+
+restaurant.numGests = 0;
+const guests = restaurant.numGests || 10;
+console.log(guests); // 10
+
+// Nullish: null and undifined (NOT 0 or '')
+// null and undifined is truthy in Nullish
+const guestCorrect = restaurant.numGests ?? 10;
+console.log(guestCorrect); // 0
+/*
+///////////////////////////////////////////////////////////
+// Short circuiting OR and AND
+
 console.log('---- OR ----');
 // Use any data type, return any data type, short-circuiting
 // If the first is truthty than second not will be evaluated
@@ -95,6 +110,8 @@ if (restaurant.orderPizza) {
 }
 // Both true - evaluated last true
 restaurant.orderPizza && restaurant.orderPizza('mushroom', 'spinach');
+*/
+
 /*
 ////////////////////////////////////////////
 // Rest Pattern and Parameters
