@@ -54,6 +54,7 @@ const restaurant = {
   },
 };
 
+console.log('---- OR ----');
 // Use any data type, return any data type, short-circuiting
 // If the first is truthty than second not will be evaluated
 console.log(3 || 'Andrius'); // 3
@@ -73,6 +74,27 @@ restaurant.numGests = 23;
 const guests2 = restaurant.numGests || 10;
 console.log(guests2); // 23
 
+restaurant.numGests = 0;
+const guests3 = restaurant.numGests || 10;
+console.log(guests3);
+
+console.log('---- AND ----');
+// AND - works oposite than OR operator
+// If first is false print this and stop evaluating
+console.log(0 && 'Andrius'); // 0
+
+//If first true, second true, stop evaluating - print last truthy
+console.log(7 && 'Andrius'); // Andrius
+
+// first T, T, null is falsy - stop continues
+//          true     true   false    true
+console.log('Hello' && 23 && null && 'Andrius'); // null
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushroom', 'spinach');
+}
+// Both true - evaluated last true
+restaurant.orderPizza && restaurant.orderPizza('mushroom', 'spinach');
 /*
 ////////////////////////////////////////////
 // Rest Pattern and Parameters
