@@ -49,6 +49,8 @@ const restaurant = {
   },
 };
 
+// 1) Destructuring
+
 // SPREAD, because on RIGHT side of =
 const arr = [1, 2, ...[3, 4]];
 
@@ -61,6 +63,13 @@ const [pizza, , risotto, ...otherFood] = [
   ...restaurant.starterMenu,
 ];
 console.log(pizza, risotto, otherFood);
+
+// Objects
+// ...weekdays - rest object properties stored in weekdays variable
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
+
+// 2) Functions
 
 /*
 /////////////////////////////////
