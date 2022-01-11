@@ -47,7 +47,17 @@ const restaurant = {
       `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`
     );
   },
+
+  orderPizza: function (mainIngredient, ...otherIngredient) {
+    console.log(mainIngredient);
+    console.log(otherIngredient);
+  },
 };
+// Take one main ingredient and REST ingredients store into array
+restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
+
+// Take one main ingredient and REST ingredients store into empty array
+restaurant.orderPizza('mushrooms');
 
 // 1) Destructuring
 
@@ -70,6 +80,7 @@ const { sat, ...weekdays } = restaurant.openingHours;
 console.log(weekdays);
 
 // 2) Functions
+// here rest operator - is used where we would otherwise write variables names, separated by a commas. Rest and Spread same syntax, but works oposite
 const add = function (...numbers) {
   let sum = 0;
   // Was wrapped into {} and was diff print
@@ -83,7 +94,7 @@ add(8, 2, 5, 3, 2, 1, 4);
 
 // Created another array and used spread operator with this variable into function add
 const x = [23, 5, 7];
-add(...x);
+add(...x); // here spread operator - is used where we would otherwise write values, separated by a comma.
 
 /*
 /////////////////////////////////
