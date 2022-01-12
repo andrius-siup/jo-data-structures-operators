@@ -54,6 +54,19 @@ const restaurant = {
   },
 };
 
+////////////////////////////////
+// Looping Arrays: The for-of Loop
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// Printed menu
+for (const item of menu) console.log(item);
+
+for (const item of menu.entries()) {
+  // console.log(item); // printed array
+  console.log(`${item[0] + 1}: ${item[1]}`);
+}
+
+// console.log([...menu.entries()]);
+
 /*
 const rest1 = {
   name: 'Capri',
@@ -394,6 +407,7 @@ Test data for 6.: First, use players 'Davies', 'Muller', 'Lewandowski' and 'Kimm
 Then, call the function again with players from game.scored
 */
 
+/*
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
@@ -470,3 +484,4 @@ printGoals(...game.scored);
 // 7. true && 'string', also tru, last one print
 team1 < team2 && console.log('Team 1 is more likely to win');
 team1 > team2 && console.log('Team 2 is more likely to win');
+*/
