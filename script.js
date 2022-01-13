@@ -60,6 +60,17 @@ if (restaurant.openingHours && restaurant.openingHours.mon)
 
 // WITH optional chaining
 console.log(restaurant.openingHours.mon?.open);
+console.log(restaurant.openingHours?.mon?.open);
+
+// Example
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+for (const day of days) {
+  // console.log(day);
+  // Checked wich days are open
+  const open = restaurant.openingHours[day]?.open;
+  console.log(`On ${day}, we open at ${open}`);
+}
 
 // if (restaurant.openingHours.fri) console.log(restaurant.openingHours.fri.open);
 /*
