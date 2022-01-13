@@ -52,6 +52,48 @@ const restaurant = {
     console.log(otherIngredient);
   },
 };
+
+//////////////////////////////////////////////////////
+// Sets- cannot be duplicate and no indexes, values unique
+const orderSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+
+console.log(orderSet);
+
+console.log(new Set('Andrius'));
+
+console.log(orderSet.size); // 3
+console.log(orderSet.has('Pizza'));
+console.log(orderSet.has('Bread'));
+orderSet.add('Garlic Bread');
+orderSet.add('Garlic Bread'); // added only one
+orderSet.delete('Risotto');
+// orderSet.clear();
+
+console.log(orderSet);
+
+for (const order of orderSet) console.log(order);
+
+// Example
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+
+// const staffUnique = new Set(staff);
+// console.log(staffUnique); // Set ["Waiter", "Chef", "Manager"]
+
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique); // Array ["Waiter", "Chef", "Manager"]
+console.log(
+  new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size
+); // unique size
+console.log(new Set(staff).size); // unique size
+
+console.log(new Set('antanasKavaliaskas').size); // 9 unique
 /*
 ///////////////////////////////////////////////////////////
 // Looping Objects: Keys, values, entries
@@ -515,6 +557,9 @@ const game = {
     team2: 6.5,
   },
 };
+
+/*
+//////////////////////////////////////////////////////
 // Challenge - 2
 // 1. Print scored players
 const playerScored = game.scored.entries();
@@ -570,6 +615,7 @@ for (const player of game.scored) {
   scorers[player] ? scorers[player]++ : (scorers[player] = 1);
 }
 console.log(scorers);
+*/
 
 /*
 // Challenge - 1 
