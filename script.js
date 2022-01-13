@@ -52,7 +52,7 @@ const restaurant = {
     console.log(otherIngredient);
   },
 };
-
+/*
 ///////////////////////////////////////////////////////////
 // Looping Objects: Keys, values, entries
 
@@ -80,6 +80,7 @@ for (const [key, { open, close }] of entries) {
   // console.log(x);
   console.log(`On ${key} we open at ${open} and close at ${close}`);
 }
+*/
 
 /*
 ///////////////////////////////////////////////////////////
@@ -474,7 +475,6 @@ Test data for 6.: First, use players 'Davies', 'Muller', 'Lewandowski' and 'Kimm
 Then, call the function again with players from game.scored
 */
 
-/*
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
@@ -515,7 +515,64 @@ const game = {
     team2: 6.5,
   },
 };
+// Challenge - 2
+// 1. Print scored players
+const playerScored = game.scored.entries();
 
+for (const [i, player] of playerScored) {
+  console.log(`Goal ${i + 1}: ${player}`);
+}
+
+// 2. Calculate avg of odd
+// const odds = Object.keys(game.odds);
+// console.log(odds);
+
+// const oddValues = Object.values(game.odds);
+// console.log(oddValues);
+
+// let sum = 0;
+// for (const c of oddValues) {
+//   sum += c;
+// }
+// console.log(sum);
+// const averageOdds = sum / oddValues.length;
+// console.log(averageOdds);
+
+// Same but less coding
+const odds = Object.values(game.odds);
+let average = 0;
+for (const odd of odds) average += odd;
+average /= odds.length;
+console.log(average);
+
+// 3.
+// console.log(`Odd of victory ${game.team1}: ${game.odds.team1}`);
+// console.log(`Odd of draw: ${game.odds.x}`);
+// console.log(`Odd of victory ${game.team2}: ${game.odds.team2}`);
+
+//
+for (const [team, odd] of Object.entries(game.odds)) {
+  // console.log(team, odd);
+  const teamStr = team === 'x' ? 'draw' : 'victory ${game[team]}';
+  console.log(`Odd of ${teamStr} ${odd}`);
+}
+
+// // Bonus: Create an object called 'scorers' which contains the names of the
+// players who scored as properties, and the number of goals as the value. In this
+// game, it will look like this:
+//      {
+//        Gnarby: 1,
+//        Hummels: 1,
+//        Lewandowski: 2
+//      }
+const scorers = {};
+for (const player of game.scored) {
+  scorers[player] ? scorers[player]++ : (scorers[player] = 1);
+}
+console.log(scorers);
+
+/*
+// Challenge - 1 
 // 1.
 const [players1, players2] = game.players;
 console.log(players1, players2);
