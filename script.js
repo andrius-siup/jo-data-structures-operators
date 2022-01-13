@@ -53,6 +53,22 @@ const restaurant = {
   },
 };
 
+///////////////////////////////////////////////////////////
+// Looping Objects: Keys, values, entries
+
+const properties = Object.keys(openingHours);
+console.log(properties);
+console.log(`We are open on ${properties.length} days`);
+
+// Looping obj keys in openingHours
+for (const day of Object.keys(openingHours)) {
+  console.log(day);
+}
+
+/*
+///////////////////////////////////////////////////////////
+// Optional chaining
+
 if (restaurant.openingHours && restaurant.openingHours.mon)
   console.log(restaurant.openingHours.mon.open);
 
@@ -86,6 +102,8 @@ else console.log('user array empty');
 console.log(users[0]?.name ?? 'User array empty');
 
 // if (restaurant.openingHours.fri) console.log(restaurant.openingHours.fri.open);
+*/
+
 /*
 ////////////////////////////////
 // Looping Arrays: The for-of Loop
