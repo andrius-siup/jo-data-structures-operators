@@ -72,9 +72,18 @@ for (const day of days) {
   console.log(`On ${day}, we open at ${open}`);
 }
 
-// Methods
+// Methods (optional operator ?) (?? nulish coalescing operator)
 console.log(restaurant.order?.(0, 1) ?? 'Method does not exist');
 console.log(restaurant.orderRisotto?.(0, 1) ?? 'Method does not exist');
+
+// Array
+const users = [{ name: 'Andrius', email: 'hello@andrius.io' }];
+// const users = [];
+
+if (users.length > 0) console.log(users[0].name);
+else console.log('user array empty');
+// Same as above but less coding with ? and ??
+console.log(users[0]?.name ?? 'User array empty');
 
 // if (restaurant.openingHours.fri) console.log(restaurant.openingHours.fri.open);
 /*
