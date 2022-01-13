@@ -58,12 +58,14 @@ const restaurant = {
 
 const properties = Object.keys(openingHours);
 console.log(properties);
-console.log(`We are open on ${properties.length} days`);
+let openStr = `We are open on ${properties.length} days: `;
 
 // Looping obj keys in openingHours
-for (const day of Object.keys(openingHours)) {
-  console.log(day);
+for (const day of properties) {
+  // console.log(day);
+  openStr += `${day}, `;
 }
+console.log(openStr);
 
 /*
 ///////////////////////////////////////////////////////////
