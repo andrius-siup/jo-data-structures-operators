@@ -53,6 +53,9 @@ const restaurant = {
   },
 };
 
+if (restaurant.openingHours.mon) console.log(restaurant.openingHours.mon.open);
+
+if (restaurant.openingHours.fri) console.log(restaurant.openingHours.fri.open);
 /*
 ////////////////////////////////
 // Looping Arrays: The for-of Loop
