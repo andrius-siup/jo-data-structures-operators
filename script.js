@@ -142,6 +142,11 @@ console.log(time);
 
 console.log(`An event happened, on average, every ${time / gameEvents.size} minutes`);
 
+// 4.
+for (const [key, value] of gameEvents) {
+  console.log(`[HALF] ${key}: ${value}`);
+}
+
 //////////////////////////////////////////////////////
 // Maps: Fundamentals
 // const rest = new Map();
