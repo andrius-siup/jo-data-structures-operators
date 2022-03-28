@@ -320,11 +320,11 @@ document.querySelector('button').addEventListener('click', function() {
   // console.log(rows);
   // console.log(text);
 
-  for (const row of rows) {
+  for (const [i, row] of rows.entries()) {
     const [first, second] = row.toLowerCase().trim().split('_');
     // console.log(row, first, second);
     const output = `${first}${second.replace(second[0], second[0].toUpperCase())}`;
-    console.log(output);
+    console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
   }
 })
 
