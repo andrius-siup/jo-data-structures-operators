@@ -143,9 +143,9 @@ console.log(time);
 console.log(`An event happened, on average, every ${time / gameEvents.size} minutes`);
 
 // 4.
-for (const [key, value] of gameEvents) {
-  const half = key <= 45 ? 'First' : 'SECOND';
-  console.log(`[${half} HALF] ${key}: ${value}`);
+for (const [min, events] of gameEvents) {
+  const half = min <= 45 ? 'First' : 'SECOND';
+  console.log(`[${half} HALF] ${min}: ${events}`);
 }
 
 //////////////////////////////////////////////////////
