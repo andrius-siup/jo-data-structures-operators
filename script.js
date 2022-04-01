@@ -278,9 +278,33 @@ planesInLine(12);
 // console.log([...question.values()]);
 
 
+
+//////////////////////////////////////////////////////
+// Default parameters
+
+const bookings = [];
+// on ES6 default values we can specified in function parameters
+const createdBooking = function(flightNum, numPassengers = 1, price = 199) {
+  // ES5 old version
+  // numPassengers = numPassengers || 1;
+  // price = price || 199;
+
+  const booking = {
+    flightNum,
+    numPassengers,
+    price
+  }
+console.log(booking);
+bookings.push(booking);
+}
+
+createdBooking('LH123');
+createdBooking('LH123', 1, 179);
+createdBooking('LH123', 2, 500);
+
 //////////////////////////////////////////////////////
 // String Methods Practice
-
+/*
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
@@ -297,6 +321,7 @@ for (const flight of flights.split('+')) {
   const output = `${type.startsWith('_Delayed') ? '🔴': ''}${type.replaceAll('_', ' ')} from ${getCode(from)} to ${getCode(to)} (${time.replace(':', 'h')})`.padStart(44);
   console.log(output);
 }
+*/
 
 ///////////////////////////////////////
 // Coding Challenge #4
