@@ -284,7 +284,7 @@ planesInLine(12);
 
 const bookings = [];
 // on ES6 default values we can specified in function parameters
-const createdBooking = function(flightNum, numPassengers = 1, price = 199) {
+const createdBooking = function(flightNum, numPassengers = 1, price = 199 * numPassengers) {
   // ES5 old version
   // numPassengers = numPassengers || 1;
   // price = price || 199;
@@ -301,6 +301,11 @@ bookings.push(booking);
 createdBooking('LH123');
 createdBooking('LH123', 1, 179);
 createdBooking('LH123', 2, 500);
+createdBooking('lh321', 5);
+
+createdBooking('lh321', undefined, 1000); // skip passengers
+
+
 
 //////////////////////////////////////////////////////
 // String Methods Practice
